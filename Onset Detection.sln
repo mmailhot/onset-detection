@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onset Detection Test Program", "Onset Detection Test Program\Onset Detection Test Program.csproj", "{3C635F42-D95C-4160-8CB1-616FFA2B3E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onset Detection Library", "Onset Detection Library\Onset Detection Library.csproj", "{701652F9-3220-4A7D-AEBB-6FAACF755639}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C635F42-D95C-4160-8CB1-616FFA2B3E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C635F42-D95C-4160-8CB1-616FFA2B3E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C635F42-D95C-4160-8CB1-616FFA2B3E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C635F42-D95C-4160-8CB1-616FFA2B3E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
