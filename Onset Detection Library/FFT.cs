@@ -109,13 +109,13 @@ namespace Onset_Detection_Library
             return output;
         }
 
-        public static Complex[] FastTransform(double[] samples)
+        public static Complex[] FastTransform(double[] samples,int offset, int length)
         {
-            var complexSamples = new Complex[samples.Length];
-            double[] window = FFTHelpers.HammingWindow(samples.Length);
+            var complexSamples = new Complex[length];
+            double[] window = FFTHelpers.HammingWindow(length);
 
-            for (int i = 0; i < samples.Length; i++)
-                complexSamples[i] = new Complex(samples[i] * window[i], 0);
+            for (int i = 0; i < length; i++)
+                complexSamples[i] = new Complex(samples[i+offset] * window[i], 0);
 
             Transform.FourierForward(complexSamples);
             return complexSamples;

@@ -49,7 +49,7 @@
     <Compile Include="AudioData.cs" />
     <Compile Include="FFT.cs" />
     <Compile Include="FFTHelpers.cs" />
-    <Compile Include="OnsetDetector.cs" />
+    <Compile Include="OnsetData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
