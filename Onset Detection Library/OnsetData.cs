@@ -13,6 +13,7 @@ namespace Onset_Detection_Library
         public AudioData Audio { get; private set; }
         public int BlockSize { get; private set; }
         public double[] SpectralFlux { get; private set; }
+        public List<int> PeakFrames { get; private set; }
         int _numberOfBlocks;
         const double _thresholdMultiplier = 1.5;
         const int _thresholdSize = 10;
@@ -49,6 +50,9 @@ namespace Onset_Detection_Library
 
             //Prune Values
             var pruned_flux = PruneValues(SpectralFlux, thresholds);
+
+            //Calculate Peaks
+            PeakFrames = FindPeaks(pruned_flux);
         }
 
         private double CalculateSpectralFlux(Complex[] oldData, Complex[] newData){
@@ -110,5 +114,19 @@ namespace Onset_Detection_Library
             return pruned;
         }
 
+        private List<int> FindPeaks(double[] data)
+        {
+            List<int> peaks = new List<int>();
+
+            for (int i = 1; i < data.Length - 1; i++)
+            {
+                if (data[i] > data[i + 1] && data[i] > data[i-1])
+                {
+                    peaks.Add(i);
+                }
+            }
+
+            return peaks;
+        }
     }
 }
