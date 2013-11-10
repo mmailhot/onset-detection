@@ -41,9 +41,9 @@ namespace Onset_Detection_Library
 
             return new AudioData(data, sampleRate);
         }
-        private static short BytesToShort(byte[] array, int index)
+        private static int BytesToShort(byte[] array, int index)
         {
-            return System.BitConverter.ToInt16(array, index);
+            return System.BitConverter.ToInt32(array, index);
         }
         private static float BytesToNormalizedFloat(byte[] array, int index)
         {

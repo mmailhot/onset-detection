@@ -55,6 +55,11 @@ namespace Onset_Detection_Library
             PeakFrames = FindPeaks(pruned_flux);
         }
 
+        public double GetFrameTime(int frame)
+        {
+            return frame * 1.0 * BlockSize / Audio.SampleRate;
+        }
+
         private double CalculateSpectralFlux(Complex[] oldData, Complex[] newData){
             double flux = 0.0;
             for (int i = 0; i < oldData.Length / 2; i++)
