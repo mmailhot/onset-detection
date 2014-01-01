@@ -16,7 +16,8 @@ namespace Onset_Detection_Test_Program
     {
         static void Main(string[] args)
         {
-            const string filename = @"D:\DaylightShort.wav";
+            Console.WriteLine("Enter a song filename:");
+            string filename = Console.ReadLine();
 
             Stopwatch timer = new Stopwatch();
             timer.Start();
