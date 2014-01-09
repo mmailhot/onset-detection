@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onset Detection Test Progra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onset Detection Library", "Onset Detection Library\Onset Detection Library.csproj", "{701652F9-3220-4A7D-AEBB-6FAACF755639}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnsetUI", "OnsetUI\OnsetUI.csproj", "{22651E00-9F1F-4A7A-B25D-16A74C34CF77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{701652F9-3220-4A7D-AEBB-6FAACF755639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22651E00-9F1F-4A7A-B25D-16A74C34CF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22651E00-9F1F-4A7A-B25D-16A74C34CF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22651E00-9F1F-4A7A-B25D-16A74C34CF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22651E00-9F1F-4A7A-B25D-16A74C34CF77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
