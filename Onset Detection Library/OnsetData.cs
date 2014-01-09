@@ -14,6 +14,7 @@ namespace Onset_Detection_Library
         public int BlockSize { get; private set; }
         public double[] SpectralFlux { get; private set; }
         public List<int> PeakFrames { get; private set; }
+        public List<float> PeakStrength { get; private set; }
         int _numberOfBlocks;
         const double _thresholdMultiplier = 1.5;
         const int _thresholdSize = 10;
@@ -53,6 +54,7 @@ namespace Onset_Detection_Library
 
             //Calculate Peaks
             PeakFrames = FindPeaks(pruned_flux);
+            PeakStrength = FillStrengths(pruned_flux, PeakFrames);
         }
 
         public double GetFrameTime(int frame)
@@ -132,6 +134,18 @@ namespace Onset_Detection_Library
             }
 
             return peaks;
+        }
+
+        private List<float> FillStrengths(double[] data, List<int> peaks)
+        {
+            List<float> strengths = new List<float>();
+            double top = data.Max();
+            
+            foreach(var peak in peaks){
+                strengths.Add((float)(data[peak] / top));
+            }
+
+            return strengths;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace Onset_Detection_Test_Program
 
             List<int> temp = new List<int>(onsets.PeakFrames);
 
-            using(var waveFileReader = new ByteTrackingWaveReader(filename))
+            using(var waveFileReader = new WaveFileReader(filename))
             using(WaveChannel32 wc = new WaveChannel32(waveFileReader){PadWithZeroes = false})
             using(var audioOutput = new DirectSoundOut())
             {
