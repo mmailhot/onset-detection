@@ -38,6 +38,8 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.drawingSurface = new System.Windows.Forms.PictureBox();
             this.tmrRedraw = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTimecode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.drawingSurface)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +108,7 @@
             // 
             // drawingSurface
             // 
-            this.drawingSurface.Location = new System.Drawing.Point(24, 184);
+            this.drawingSurface.Location = new System.Drawing.Point(24, 165);
             this.drawingSurface.Name = "drawingSurface";
             this.drawingSurface.Size = new System.Drawing.Size(600, 200);
             this.drawingSurface.TabIndex = 6;
@@ -118,11 +120,32 @@
             this.tmrRedraw.Interval = 20;
             this.tmrRedraw.Tick += new System.EventHandler(this.tmrRedraw_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(213, 378);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 7;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblTimecode
+            // 
+            this.lblTimecode.AutoSize = true;
+            this.lblTimecode.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTimecode.Location = new System.Drawing.Point(304, 378);
+            this.lblTimecode.Name = "lblTimecode";
+            this.lblTimecode.Size = new System.Drawing.Size(42, 13);
+            this.lblTimecode.TabIndex = 8;
+            this.lblTimecode.Text = "--:--/--:--";
+            // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 417);
+            this.Controls.Add(this.lblTimecode);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.drawingSurface);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.lblStatus);
@@ -150,6 +173,8 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.PictureBox drawingSurface;
         private System.Windows.Forms.Timer tmrRedraw;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTimecode;
     }
 }
 

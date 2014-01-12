@@ -116,7 +116,7 @@ namespace OnsetUI
                     double currentTime = wc.CurrentTime.TotalMilliseconds;
                     bool done = false;
                     int index = visData.startIndex;
-                    while (!done)
+                    while (!done && index < visData.indices.Count)
                     {
                         double indexTime = visData.indices[index] * 1000.0 * data.BlockSize / data.Audio.SampleRate;
                         int xPosition = position(currentTime, indexTime);
@@ -152,6 +152,17 @@ namespace OnsetUI
             
         }
 
+        private void updateTimes()
+        {
+            int currentSeconds = wc.CurrentTime.Seconds;
+            int currentMinutes = wc.CurrentTime.Minutes;
+
+            int totalSeconds = wc.TotalTime.Seconds;
+            int totalMinutes = wc.TotalTime.Minutes;
+
+            lblTimecode.Text = String.Format("{0:D2}:{1:D2}/{2:D2}:{3:D2}", currentMinutes, currentSeconds, totalMinutes, totalSeconds);
+        }
+
         private int position(double currentTime, double indexTime)
         {
             double difference = currentTime - indexTime ;
@@ -161,7 +172,9 @@ namespace OnsetUI
         private void tmrRedraw_Tick(object sender, EventArgs e)
         {
             drawingSurface.Refresh();
+            updateTimes();
         }
+
 
     }
 }
